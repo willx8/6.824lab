@@ -1,0 +1,20 @@
+Test: First primary ...
+  ... Passed
+Test: First backup ...
+  ... Passed
+Test: Backup takes over if primary fails ...
+  ... Passed
+Test: Restarted server becomes backup ...
+The viewnum 3 is neither viewservice's 4 nor 0.
+  ... Passed
+Test: Idle third server becomes backup if primary fails ...
+The viewnum 4 is neither viewservice's 5 nor 0.
+  ... Passed
+Test: Restarted primary treated as dead ...
+The viewnum 5 is neither viewservice's 6 nor 0.
+  ... Passed
+--- FAIL: Test1 (2.69s)
+	test_test.go:171: wrong primary or backup
+FAIL
+exit status 1
+FAIL	viewservice	2.706s
