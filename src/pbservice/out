@@ -1,0 +1,177 @@
+Test: Single primary, no backup ...
+  ... Passed
+Test: Add a backup ...
+  ... Passed
+Test: Primary failure ...
+  ... Passed
+Test: Kill last server, new one should not be active ...
+  ... Passed
+Test: at-most-once Put; unreliable ...
+unexpected EOF
+Duplicate put! Previous reply:{OK, 890022063}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 78513644}
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+Duplicate put! Previous reply:{OK, 570775273}
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, 2115173919}
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+Duplicate put! Previous reply:{OK, 2115173919}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 2885961954}
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+unexpected EOF
+Duplicate put! Previous reply:{OK, 3095979152}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 3095979152}
+Duplicate put! Previous reply:{OK, 3095979152}
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+Duplicate put! Previous reply:{OK, 97586798}
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, 2426605318}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 364654356}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 896619215}
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, 1593328806}
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: socket is not connected
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, 351551679}
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+Duplicate put! Previous reply:{OK, 351551679}
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, 1360606152}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 1073064133}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 1889135792}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 1372785937}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 3733188979}
+unexpected EOF
+Duplicate put! Previous reply:{OK, 3545177692}
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+  ... Passed
+Test: Put() immediately after backup failure ...
+  ... Passed
+Test: Put() immediately after primary failure ...
+  ... Passed
+Test: Concurrent Put()s to the same key ...
+  ... Passed
+Test: Concurrent Put()s to the same key; unreliable ...
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+write unix ->/var/tmp/824-501/pb-11552-csu-2: write: broken pipe
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+write unix ->/var/tmp/824-501/pb-11552-csu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/pb-11552-csu-2: write: broken pipe
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+unexpected EOF
+unexpected EOF
+Duplicate put! Previous reply:{OK, }
+Duplicate put! Previous reply:{OK, }
+unexpected EOF
+--- FAIL: TestConcurrentSameUnreliable (9.18s)
+	test_test.go:470: Get(0) from backup; wanted 2831743489744054549, got 2592552389122954579
+Test: Repeated failures/restarts ...
+exit status 2
+FAIL	pbservice	75.327s

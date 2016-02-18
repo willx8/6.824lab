@@ -75,7 +75,6 @@ func (vs *ViewServer) Ping(args *PingArgs, reply *PingReply) error {
 		}
 	} else {
 		if vs.v.Primary == "" {
-			// central meeting decision: you be primary.
 			// 中央已经开会决定了，你来当primary
 			vs.v = View{vs.v.Viewnum + 1, args.Me, ""}
 			return nil
@@ -90,6 +89,12 @@ func (vs *ViewServer) Ping(args *PingArgs, reply *PingReply) error {
 	}
 	// the primary from the current view acknowledges that
 	// it is operating in the current view
+	//	newPrimaryAcked := false
+	//	if vs.tempv.Primary == vs.v.Backup {
+	//		newPrimaryAcked = vs.bAcked
+	//	} else if vs.tempv.Primary == vs.v.Primary {
+	//		newPrimaryAcked = vs.pAcked
+	//	}
 	if vs.pAcked && vs.tempv.Viewnum > vs.v.Viewnum {
 		if vs.tempv.Viewnum != vs.v.Viewnum+1 {
 			return fmt.Errorf("incorrect temp viewnum %v", vs.tempv.Viewnum)
